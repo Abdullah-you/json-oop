@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signed in</title>
+</head>
+<body>
+    <h2>Welcome {{ request.user.first_name }}. You've Successfully logged in !!</h2>
+    <h2> Now you can manage your tasks ! </h2>
+    <ul>
+        {% for item in tasks %}
+          <li><a href="{% url 'items:taskdetail' item.id %}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <button><a href="{% url 'items:taskcreate' %}">Create New Task</a></button>
+    <button type="submit"><a href="{% url 'users:logout' %}">Logout</button></a>
+
+</body>
+</html>

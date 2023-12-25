@@ -1,0 +1,17 @@
+li a {
+    color: olive;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 25px;
+}
+
+li a:hover {
+    color: white;
+}
+
+li {
+    margin-bottom: 20px;
+}
+body {
+    background: white url("images/pexels-eberhard-grossgasteiger-1624496.jpg") no-repeat;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if switch %}
+    <form action="" method="post">
+        {% csrf_token %}
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <button type="submit">Send OTP</button>
+    </form>
+    {% else %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="otp">Enter recieved otp:</label>
+        <input type="number" id="otp" name="otp">
+        <br><br>
+
+        <label for="newpass">Enter new password:</label>
+        <input type="password" id="newpass" name="newpass">
+        <br>
+        <button type="submit">Confirm</button>
+    </form>
+    {% endif %}
+</body>
+</html>
